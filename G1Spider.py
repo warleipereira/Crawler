@@ -8,5 +8,5 @@ class G1spiderSpider(scrapy.Spider):
 
     def parse(self, response):
         page_title = response.css('Title::text').extract_first()
-        print(page_title)
-        pass
+        yield {'Titulo':page_title}
+       
